@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins-Regular";
+  text-decoration: none;
+  color: black;
+}
+
+/* ========================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 6%;
+  align-items: center;
+  text-align: center;
+}
+
+header a {
+  padding: 0.5em;
+}
+header nav ul {
+  display: flex;
+  gap: 2em;
+  position: relative;
+}
+
+header nav ul li:hover {
+  background-color: green;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins-Regular.woff) format("woff");
+  src: url(/assets/fonts/Poppins-Regular.woff2) format("woff2");
+}
