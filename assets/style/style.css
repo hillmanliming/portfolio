@@ -1,6 +1,7 @@
 html {
   height: 100%;
   width: 100%;
+
 }
 
 body {
@@ -31,6 +32,7 @@ header {
 header a {
   padding: 0.5em;
 }
+
 header nav ul {
   display: flex;
   gap: 2em;
@@ -41,6 +43,20 @@ header nav ul li:hover {
   background-color: green;
 }
 
+div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid black;
+  animation-timing-function: ease-out;
+  transition: 100ms;
+
+
+
+}
+
+/* =================================================================== */
 @font-face {
   font-family: "Poppins-Regular";
   src: url(/assets/fonts/Poppins-Regular.woff) format("woff");
