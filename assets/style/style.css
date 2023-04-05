@@ -5,7 +5,7 @@ html {
 
 body {
   height: 100%;
-  animation: entry 2s ease-in forwards;
+  animation: entry 1.4s ease-out forwards;
 }
 
 * {
@@ -41,14 +41,6 @@ header nav ul {
 
 header nav ul li:hover {
   background-color: green;
-}
-
-div {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  position: absolute;
-  border: 3px solid black;
 }
 
 /* =================================================================== */
