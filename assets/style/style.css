@@ -49,8 +49,6 @@ div {
   border-radius: 50%;
   position: absolute;
   border: 3px solid black;
-  animation-timing-function: ease-out;
-  transition: 100ms;
 }
 
 /* =================================================================== */
