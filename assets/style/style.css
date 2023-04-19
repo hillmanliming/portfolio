@@ -16,14 +16,12 @@ html {
   list-style: none;
   font-family: "Poppins-Regular";
   text-decoration: none;
-  color: black;
 }
 
-/* ========================================== */
-header {
+/* ======================HEADER==================== */
+.header {
   display: flex;
   justify-content: space-between;
-  padding: 2% 6%;
   align-items: start;
   text-align: center;
   width: 100%;
@@ -33,23 +31,63 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
-  animation: fadeIn 1s forwards
+  animation: fadeIn 1s forwards;
 }
 
-header a {
-  padding: 0.5em;
-
+.header a {
+  padding: .5em;
 }
 
-header nav ul {
+.container {
+  padding: 1% 4%;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav>a {
+  color: black;
+}
+
+nav ul {
   display: flex;
   gap: 2em;
+}
+
+
+.home-li-hover a {
+  color: rgb(150, 150, 150);
   position: relative;
 }
 
-header nav ul li:focus {
-  background-color: green;
+.home-li-hover:hover a {
+  color: black;
 }
+
+.active:before {
+  content: '';
+  transform: translateX(-50%);
+  border-radius: 100%;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  top: 35px;
+  bottom: 20px;
+  left: 50%;
+  height: 8px;
+  width: 8px;
+
+}
+
+.active {
+  position: relative;
+}
+
+
 
 /* =================================================================== */
 @font-face {
