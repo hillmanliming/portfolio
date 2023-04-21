@@ -31,19 +31,12 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards, slideLeft 1s forwards;
+  animation: slideLeft 1s forwards;
   transform: translateX(-100%);
 }
 
-.nav {
-  transform: translateX(150%);
-  animation: slideRight 1s forwards;
-}
-
-
 .header a {
-  padding: .25em;
+  padding: 0.25em;
 }
 
 .container {
@@ -58,7 +51,7 @@ nav {
   flex-wrap: wrap;
 }
 
-nav>a {
+nav > a {
   color: black;
 }
 
@@ -66,7 +59,6 @@ nav ul {
   display: flex;
   gap: 2em;
 }
-
 
 .home-li-hover a {
   color: rgb(150, 150, 150);
@@ -79,11 +71,10 @@ nav ul {
 
 .active a {
   color: black;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
 .active::after {
-  content: '';
+  content: "";
   transform: translateX(-50%);
   border-radius: 100%;
   position: absolute;
@@ -93,30 +84,33 @@ nav ul {
   left: 50%;
   height: 8px;
   width: 8px;
-
 }
 
 .active {
   position: relative;
 }
 
-
-article {
+.welcome-note {
   position: absolute;
   top: 40%;
   left: 8%;
   width: 40%;
   opacity: 0;
   animation: fadeIn 1s 1.5s forwards;
+  font-size: 2.5rem;
 }
 
-article :nth-child(2) {
+.welcome-note :nth-child(2) {
   position: absolute;
   top: 100%;
   left: 20%;
 }
 
-
+.home-sctn-2 {
+  background-color: black;
+  height: 30vh;
+  color: white;
+}
 
 /* ================ ANIMATIONS ======== */
 @keyframes slideLeft {
@@ -149,21 +143,9 @@ article :nth-child(2) {
   }
 }
 
-
-
 /* =================================================================== */
 @font-face {
   font-family: "Poppins-Regular";
   src: url(/assets/fonts/Poppins-Regular.woff) format("woff");
   src: url(/assets/fonts/Poppins-Regular.woff2) format("woff2");
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
