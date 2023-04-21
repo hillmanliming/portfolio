@@ -5,6 +5,7 @@ html {
 
 .body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -31,11 +32,18 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 1s forwards, slideLeft 1s forwards;
+  transform: translateX(-100%);
 }
 
+.nav {
+  transform: translateX(150%);
+  animation: slideRight 1s forwards;
+}
+
+
 .header a {
-  padding: .5em;
+  padding: .25em;
 }
 
 .container {
@@ -69,13 +77,18 @@ nav ul {
   color: black;
 }
 
-.active:before {
+.active a {
+  color: black;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.active::after {
   content: '';
   transform: translateX(-50%);
   border-radius: 100%;
   position: absolute;
   background: rgb(0, 0, 0);
-  top: 35px;
+  top: 30px;
   bottom: 20px;
   left: 50%;
   height: 8px;
@@ -85,6 +98,55 @@ nav ul {
 
 .active {
   position: relative;
+}
+
+
+article {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  width: 40%;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s forwards;
+}
+
+article :nth-child(2) {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+}
+
+
+
+/* ================ ANIMATIONS ======== */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
