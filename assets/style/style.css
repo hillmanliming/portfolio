@@ -5,7 +5,7 @@ html {
 
 .body {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 * {
@@ -141,8 +141,8 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  animation: slideLeft 1s forwards;
-  transform: translateX(-100%);
+  animation: slideUp 1s forwards;
+  transform: translateY(100%);
 }
 
 .header a {
@@ -202,7 +202,7 @@ nav ul {
 
 .welcome-note {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 8%;
   width: 40%;
   opacity: 0;
@@ -271,26 +271,15 @@ nav ul {
   }
 }
 
-@keyframes slideRight {
+@keyframes slideUp {
   0% {
-    transform: translateX(150%);
+    transform: translateY(100%);
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 /* =================================================================== */
 @font-face {
   font-family: "Poppins-Regular";

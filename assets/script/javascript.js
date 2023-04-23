@@ -6,4 +6,4 @@ setTimeout(() => {
 setTimeout(() => {
   const name = document.getElementById("home-main");
   name.style.display = "block";
-}, 3500);
+}, 3000);
