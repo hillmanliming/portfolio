@@ -6,7 +6,6 @@ html {
 .body {
   height: 100%;
   overflow-x: hidden;
-
 }
 
 * {
@@ -21,7 +20,14 @@ html {
 }
 
 /* ================ */
-p {
+#loadscreen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.name,
+.lname {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,91 +38,98 @@ p {
   letter-spacing: 5rem;
 }
 
-span:nth-child(1) {
+.name {
+  transform: translateX(0%);
+  animation: moveRight 0.5s 2.3s ease-in forwards;
+}
+
+.lname {
+  transform: translateX(0%);
+  animation: moveLeft 0.5s 2.3s ease-in forwards;
+}
+
+.name span:nth-child(1) {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
 }
 
-span:nth-child(2) {
+.name span:nth-child(2) {
   opacity: 0;
   animation: fadeIn 0.5s 0.3s ease-in forwards;
 }
 
-span:nth-child(3) {
+.name span:nth-child(3) {
   opacity: 0;
   animation: fadeIn 0.5s 0.6s ease-in forwards;
 }
 
-span:nth-child(4) {
+.name span:nth-child(4) {
   opacity: 0;
   animation: fadeIn 0.5s 0.9s ease-in forwards;
 }
 
-span:nth-child(5) {
+.name span:nth-child(5) {
   opacity: 0;
   animation: fadeIn 0.5s 1.2s ease-in forwards;
 }
 
-span:nth-child(6) {
+.name span:nth-child(6) {
   opacity: 0;
   animation: fadeIn 0.5s 1.5s ease-in forwards;
 }
 
-span:nth-child(7) {
+.name span:nth-child(7) {
   opacity: 0;
   animation: fadeIn 0.5s 1.8s ease-in forwards;
 }
 
-span:nth-child(8) {
+/* last name */
+
+.lname span:nth-child(7) {
   opacity: 0;
-  animation: fadeIn 0.5s 20s ease-in forwards;
+  animation: fadeIn 0.5s ease-in forwards;
 }
 
-span:nth-child(9) {
+.lname span:nth-child(6) {
   opacity: 0;
   animation: fadeIn 0.5s 0.3s ease-in forwards;
 }
 
-span:nth-child(10) {
+.lname span:nth-child(5) {
   opacity: 0;
   animation: fadeIn 0.5s 0.6s ease-in forwards;
 }
 
-span:nth-child(11) {
+.lname span:nth-child(4) {
   opacity: 0;
   animation: fadeIn 0.5s 0.9s ease-in forwards;
 }
 
-span:nth-child(12) {
+.lname span:nth-child(3) {
   opacity: 0;
   animation: fadeIn 0.5s 1.2s ease-in forwards;
 }
 
-span:nth-child(13) {
+.lname span:nth-child(2) {
   opacity: 0;
   animation: fadeIn 0.5s 1.5s ease-in forwards;
 }
 
-span:nth-child(14) {
+.lname span:nth-child(1) {
   opacity: 0;
   animation: fadeIn 0.5s 1.8s ease-in forwards;
 }
 
-@keyframes fadeIn {
-
-  0% {
-    opacity: 0;
-
-  }
-
-  100% {
-    opacity: 1;
-  }
+.name {
+  transform: translate(0%);
 }
-
-have each letter fade in one after the other
 
 /* ======================HEADER==================== */
+#home-main {
+  animation: slideUp 1s 0s ease-out forwards;
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -148,7 +161,7 @@ nav {
   flex-wrap: wrap;
 }
 
-nav>a {
+nav > a {
   color: black;
 }
 
@@ -210,6 +223,44 @@ nav ul {
 }
 
 /* ================ ANIMATIONS ======== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0%);
+  }
+
+  99% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  99% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+/* ================================ */
 @keyframes slideLeft {
   0% {
     transform: translateX(-100%);
