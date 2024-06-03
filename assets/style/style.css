@@ -1,0 +1,128 @@
+/* =======================================GENERAL====================== */
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+body {
+	min-height: 100vh;
+}
+
+:root {
+	--main-title: 3rem;
+	--sub-title: 2rem;
+	--par: 1.3rem;
+	--small: 0.7rem;
+
+	/*===
+--white: 
+--black:
+===*/
+	--margin: 3%;
+	--padding: 3%;
+}
+
+@font-face {
+	font-family: "Lato-Regular";
+	src: url("../fonts/Lato-Regular.woff2") format("woff2");
+}
+
+/* ========================================================================= */
+
+.index-main {
+	min-height: 100vh;
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	justify-content: space-evenly;
+	background-color: rgb(0, 0, 0);
+}
+
+.text-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	background-color: rgb(255, 255, 255);
+	overflow: hidden;
+}
+
+.text-wrapper:hover {
+	animation: into 1s ease forwards;
+	cursor: pointer;
+}
+
+.ltr {
+	background-color: rgb(0, 0, 0);
+}
+
+.ltr > h1 {
+	font-family: "Lato-Regular";
+	font-size: 6rem;
+	color: transparent;
+	white-space: nowrap;
+	padding: 0.5%;
+	letter-spacing: 1px;
+	animation: move-ltr 2s linear infinite;
+	color: rgb(255, 255, 255);
+}
+
+.rtl > h1 {
+	font-family: "Lato-Regular";
+	font-size: 6rem;
+	color: transparent;
+	white-space: nowrap;
+	padding: 0.5%;
+	letter-spacing: 1px;
+	animation: move-rtl 2s linear infinite;
+	color: black;
+}
+
+@keyframes move-ltr {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes move-rtl {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes into {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
