@@ -1,4 +1,5 @@
 /* =======================================GENERAL====================== */
+*,
 *::before,
 *::after {
 	box-sizing: border-box;
@@ -53,10 +54,8 @@ body {
 .index-main {
 	min-height: 100vh;
 	cursor: default;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	place-items: center;
 	overflow: hidden;
 	justify-content: space-evenly;
 	background-color: rgb(0, 0, 0);
@@ -64,18 +63,11 @@ body {
 
 .text-wrapper {
 	display: flex;
+	align-items: center;
 	justify-content: flex-start;
-	background-color: rgb(255, 255, 255);
 	overflow: hidden;
-}
-
-.text-wrapper:hover {
-	animation: into 1s ease forwards;
-	cursor: pointer;
-}
-
-.ltr {
-	background-color: rgb(0, 0, 0);
+	height: 100%;
+	z-index: 1;
 }
 
 .ltr > h1 {
@@ -83,7 +75,7 @@ body {
 	font-size: 6rem;
 	color: transparent;
 	white-space: nowrap;
-	padding: 0.5%;
+	padding: 0% 0.5% 0% 0.5%;
 	letter-spacing: 1px;
 	animation: move-ltr 2s linear infinite;
 	color: rgb(255, 255, 255);
@@ -94,10 +86,29 @@ body {
 	font-size: 6rem;
 	color: transparent;
 	white-space: nowrap;
-	padding: 0.5%;
+	padding: 0% 0.5% 0% 0.5%;
 	letter-spacing: 1px;
 	animation: move-rtl 2s linear infinite;
-	color: black;
+	color: rgb(255, 255, 255);
+}
+
+.into-1 {
+	animation: into-1 2.5s ease-in-out forwards;
+}
+
+.into-2 {
+	animation: into-2 2.5s ease-in-out forwards 0.2s;
+	opacity: 0;
+}
+
+.into-3 {
+	animation: into-1 2.5s ease-in-out forwards 0.5s;
+	opacity: 0;
+}
+
+.into-4 {
+	animation: into-2 2.5s ease-in-out forwards 0.6s;
+	opacity: 0;
 }
 
 @keyframes move-ltr {
@@ -118,11 +129,66 @@ body {
 	}
 }
 
-@keyframes into {
+@keyframes into-1 {
 	0% {
-		transform: translateX(-100%);
+		transform: translateX(-70%);
+		opacity: 1;
+	}
+
+	25% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	75% {
+		transform: translateX(0);
+		opacity: 1;
 	}
 	100% {
+		transform: translateX(100%);
+		opacity: 1;
+	}
+}
+
+@keyframes into-2 {
+	0% {
+		transform: translateX(70%);
+		opacity: 1;
+	}
+
+	25% {
 		transform: translateX(0);
+		opacity: 1;
+	}
+
+	75% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 1;
+	}
+}
+
+@keyframes exit-1 {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 1;
+	}
+}
+
+@keyframes exit-2 {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 1;
 	}
 }
