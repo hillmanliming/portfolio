@@ -61,6 +61,7 @@ body {
 	place-items: center;
 	overflow: hidden;
 	justify-content: space-evenly;
+	animation: remove-main 3s forwards;
 }
 
 .text-wrapper {
@@ -197,7 +198,6 @@ body {
 @keyframes remove-main {
 	100% {
 		display: none;
-		background-color: white;
 	}
 }
 
@@ -209,6 +209,6 @@ body {
 		background-color: black;
 	}
 	100% {
-		background-color: inherit;
+		background-color: white;
 	}
 }
