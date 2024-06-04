@@ -9,6 +9,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Lato-Regular";
 }
 
 img,
@@ -49,7 +50,9 @@ body {
 	src: url("../fonts/Lato-Regular.woff2") format("woff2");
 }
 
-/* ========================================================================= */
+/* ===================================
+INITIAL SPLASH SCREEN
+====================================== */
 
 #body {
 	animation: white-bg 3s ease-out forwards;
@@ -95,21 +98,21 @@ body {
 }
 
 .into-1 {
-	animation: into-1 2s ease-in-out forwards;
+	animation: into-1 1.5s ease forwards;
 }
 
 .into-2 {
-	animation: into-2 2s ease-in-out forwards 0.2s;
+	animation: into-2 1.5s ease forwards 0.2s;
 	opacity: 0;
 }
 
 .into-3 {
-	animation: into-1 2s ease-in-out forwards 0.5s;
+	animation: into-1 1.5s ease forwards 0.5s;
 	opacity: 0;
 }
 
 .into-4 {
-	animation: into-2 2s ease-in-out forwards 0.6s;
+	animation: into-2 1.5s ease forwards 0.6s;
 	opacity: 0;
 }
 
@@ -211,4 +214,14 @@ body {
 	100% {
 		background-color: white;
 	}
+}
+
+/* ==================
+FIRST SECTION HOME
+======================= */
+
+section {
+	display: block;
+	padding: 3%;
+	font-size: 1.25rem;
 }
