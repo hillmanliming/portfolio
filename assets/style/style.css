@@ -51,6 +51,9 @@ body {
 
 /* ========================================================================= */
 
+#body {
+	animation: white-bg 3s ease-out forwards;
+}
 .index-main {
 	min-height: 100vh;
 	cursor: default;
@@ -58,7 +61,6 @@ body {
 	place-items: center;
 	overflow: hidden;
 	justify-content: space-evenly;
-	background-color: rgb(0, 0, 0);
 }
 
 .text-wrapper {
@@ -67,7 +69,6 @@ body {
 	justify-content: flex-start;
 	overflow: hidden;
 	height: 100%;
-	z-index: 1;
 }
 
 .ltr > h1 {
@@ -93,21 +94,21 @@ body {
 }
 
 .into-1 {
-	animation: into-1 2.5s ease-in-out forwards;
+	animation: into-1 2s ease-in-out forwards;
 }
 
 .into-2 {
-	animation: into-2 2.5s ease-in-out forwards 0.2s;
+	animation: into-2 2s ease-in-out forwards 0.2s;
 	opacity: 0;
 }
 
 .into-3 {
-	animation: into-1 2.5s ease-in-out forwards 0.5s;
+	animation: into-1 2s ease-in-out forwards 0.5s;
 	opacity: 0;
 }
 
 .into-4 {
-	animation: into-2 2.5s ease-in-out forwards 0.6s;
+	animation: into-2 2s ease-in-out forwards 0.6s;
 	opacity: 0;
 }
 
@@ -190,5 +191,24 @@ body {
 	100% {
 		transform: translateX(-100%);
 		opacity: 1;
+	}
+}
+
+@keyframes remove-main {
+	100% {
+		display: none;
+		background-color: white;
+	}
+}
+
+@keyframes white-bg {
+	0% {
+		background-color: black;
+	}
+	50% {
+		background-color: black;
+	}
+	100% {
+		background-color: inherit;
 	}
 }
