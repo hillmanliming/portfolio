@@ -1,5 +1,10 @@
-let parSplash = document.querySelectorAll(".par-splash");
+let parSplash = document.querySelectorAll(".par-change-splash");
 let parSplashArray = [...parSplash]; // converts NodeList to Array
+let mainSplash = document.getElementById("main-splash");
+
+setTimeout(() => {
+	mainSplash.style.display = "none";
+}, 2000);
 
 let school = document
 	.getElementById("school")
@@ -7,6 +12,14 @@ let school = document
 		parSplashArray.forEach((parSplash) => {
 			parSplash.innerHTML = "SCHOOL";
 		});
+		mainSplash.style.display = "grid";
+		mainSplash.classList.add(".index-main");
+
+		setTimeout(() => {
+			mainSplash.style.display = "none";
+		}, 2000);
+
+		// Adjust the delay as needed
 	});
 
 let piano = document
@@ -15,6 +28,12 @@ let piano = document
 		parSplashArray.forEach((parSplash) => {
 			parSplash.innerHTML = "PIANO";
 		});
+		mainSplash.style.display = "grid";
+		mainSplash.classList.add(".index-main");
+
+		setTimeout(() => {
+			mainSplash.style.display = "none";
+		}, 2000);
 	});
 
 let about = document
@@ -23,6 +42,12 @@ let about = document
 		parSplashArray.forEach((parSplash) => {
 			parSplash.innerHTML = "ABOUT";
 		});
+		mainSplash.style.display = "grid";
+		mainSplash.classList.add(".index-main");
+
+		setTimeout(() => {
+			mainSplash.style.display = "none";
+		}, 2000);
 	});
 
 let contact = document
@@ -31,6 +56,12 @@ let contact = document
 		parSplashArray.forEach((parSplash) => {
 			parSplash.innerHTML = "CONTACT";
 		});
+		mainSplash.style.display = "grid";
+		mainSplash.classList.add(".index-main");
+
+		setTimeout(() => {
+			mainSplash.style.display = "none";
+		}, 2000);
 	});
 
 // If clicked on wxyz elemnt from header, change p1/p2 to correlating header name hard coded.

@@ -57,7 +57,6 @@ INITIAL SPLASH SCREEN
 ====================================== */
 
 #body {
-	animation: white-bg 2s ease-out forwards;
 	overflow: hidden;
 }
 .index-main {
@@ -78,7 +77,7 @@ INITIAL SPLASH SCREEN
 	height: 100%;
 }
 
-.ltr > p {
+.par-splash-1 {
 	font-family: "Lato-Regular";
 	font-size: 6rem;
 	font-weight: bold;
@@ -89,7 +88,7 @@ INITIAL SPLASH SCREEN
 	color: rgb(255, 255, 255);
 }
 
-.rtl > p {
+.par-splash-2 {
 	font-family: "Lato-Regular";
 	font-size: 6rem;
 	font-weight: bold;
@@ -179,35 +178,7 @@ INITIAL SPLASH SCREEN
 	}
 }
 
-@keyframes exit-1 {
-	0% {
-		transform: translateX(0);
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(-100%);
-		opacity: 1;
-	}
-}
-
-@keyframes exit-2 {
-	0% {
-		transform: translateX(0);
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(-100%);
-		opacity: 1;
-	}
-}
-
 @keyframes remove-main {
-	100% {
-		display: none;
-	}
-}
-
-@keyframes white-bg {
 	0% {
 		background-color: black;
 	}
@@ -218,9 +189,7 @@ INITIAL SPLASH SCREEN
 		background-color: rgb(255, 255, 255);
 	}
 }
-.p-1 {
-	cursor: pointer;
-}
+
 /* ==================
 FIRST SECTION HOME
 ======================= */
@@ -236,14 +205,11 @@ header {
 	justify-content: space-between;
 	text-wrap: wrap;
 	white-space: normal;
+	cursor: pointer;
 }
 
 .header-ul,
 .header-ul > li {
 	display: flex;
 	gap: 1rem;
-}
-
-#school {
-	cursor: pointer;
 }
