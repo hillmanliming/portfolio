@@ -29,6 +29,10 @@ select {
 	font: inherit;
 }
 
+a {
+	color: inherit;
+}
+
 body {
 	min-height: 100vh;
 }
@@ -59,7 +63,11 @@ INITIAL SPLASH SCREEN
 #body {
 	overflow: hidden;
 }
+.wrapper {
+	position: relative;
+}
 .index-main {
+	position: absolute;
 	min-height: 100vh;
 	cursor: default;
 	display: grid;
@@ -182,11 +190,11 @@ INITIAL SPLASH SCREEN
 	0% {
 		background-color: black;
 	}
-	40% {
+	35% {
 		background-color: black;
 	}
 	100% {
-		background-color: rgb(255, 255, 255);
+		background-color: rgba(255, 255, 255, 0);
 	}
 }
 
@@ -197,7 +205,6 @@ FIRST SECTION HOME
 .section-1 {
 	padding: 3%;
 	font-size: 1.25rem;
-	animation: fade-in forwards;
 }
 
 header {
@@ -205,11 +212,20 @@ header {
 	justify-content: space-between;
 	text-wrap: wrap;
 	white-space: normal;
-	cursor: pointer;
 }
 
-.header-ul,
-.header-ul > li {
+.header-ul {
 	display: flex;
 	gap: 1rem;
+}
+
+.header-li {
+	color: rgba(0, 0, 0, 0.25);
+	transition: 0.5s ease-in;
+}
+
+.header-li:hover {
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	transition: 0.3s;
 }

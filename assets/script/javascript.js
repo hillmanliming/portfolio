@@ -1,67 +1,36 @@
-let parSplash = document.querySelectorAll(".par-change-splash");
-let parSplashArray = [...parSplash]; // converts NodeList to Array
-let mainSplash = document.getElementById("main-splash");
+document.addEventListener("DOMContentLoaded", function () {
+	const parSplashArray = Array.from(
+		document.querySelectorAll(".par-change-splash")
+	);
+	const mainSplash = document.getElementById("main-splash");
+	const delay = 1750;
 
-setTimeout(() => {
-	mainSplash.style.display = "none";
-}, 2000);
+	setTimeout(() => {
+		mainSplash.style.display = "none";
+	}, delay);
 
-let school = document
-	.getElementById("school")
-	.addEventListener("click", function () {
+	function updateParSplash(text) {
 		parSplashArray.forEach((parSplash) => {
-			parSplash.innerHTML = "SCHOOL";
+			parSplash.innerHTML = text;
 		});
 		mainSplash.style.display = "grid";
-		mainSplash.classList.add(".index-main");
+		mainSplash.classList.add("index-main");
 
 		setTimeout(() => {
 			mainSplash.style.display = "none";
-		}, 2000);
+		}, delay);
+	}
 
-		// Adjust the delay as needed
-	});
+	const actions = [
+		{ id: "school", text: "SCHOOL" },
+		{ id: "piano", text: "PIANO" },
+		{ id: "about", text: "ABOUT" },
+		{ id: "contact", text: "CONTACT" },
+	];
 
-let piano = document
-	.getElementById("piano")
-	.addEventListener("click", function () {
-		parSplashArray.forEach((parSplash) => {
-			parSplash.innerHTML = "PIANO";
+	actions.forEach(({ id, text }) => {
+		document.getElementById(id).addEventListener("click", function () {
+			updateParSplash(text);
 		});
-		mainSplash.style.display = "grid";
-		mainSplash.classList.add(".index-main");
-
-		setTimeout(() => {
-			mainSplash.style.display = "none";
-		}, 2000);
 	});
-
-let about = document
-	.getElementById("about")
-	.addEventListener("click", function () {
-		parSplashArray.forEach((parSplash) => {
-			parSplash.innerHTML = "ABOUT";
-		});
-		mainSplash.style.display = "grid";
-		mainSplash.classList.add(".index-main");
-
-		setTimeout(() => {
-			mainSplash.style.display = "none";
-		}, 2000);
-	});
-
-let contact = document
-	.getElementById("contact")
-	.addEventListener("click", function () {
-		parSplashArray.forEach((parSplash) => {
-			parSplash.innerHTML = "CONTACT";
-		});
-		mainSplash.style.display = "grid";
-		mainSplash.classList.add(".index-main");
-
-		setTimeout(() => {
-			mainSplash.style.display = "none";
-		}, 2000);
-	});
-
-// If clicked on wxyz elemnt from header, change p1/p2 to correlating header name hard coded.
+});
